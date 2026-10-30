@@ -1,9 +1,6 @@
-﻿import 'package:flutter/material.dart';
-import 'screens/login_screen.dart';
+import 'package:flutter/material.dart';
+
 import 'screens/main_dashboard.dart';
-import 'screens/requirements_page.dart';
-import 'screens/coordinator_review_panel.dart';
-import 'screens/status_placement_page.dart';
 
 void main() {
   runApp(const InternshipMonitorApp());
@@ -15,19 +12,14 @@ class InternshipMonitorApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Internship Application Monitor',
+      title: 'Internship Monitor',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF3157C8)),
         useMaterial3: true,
+        scaffoldBackgroundColor: const Color(0xFFF5F7FB),
       ),
-      initialRoute: '/login',
-      routes: {
-        '/login': (context) => const LoginScreen(),
-        '/dashboard': (context) => const MainDashboard(),
-        '/requirements': (context) => const RequirementsPage(),
-        '/coordinator': (context) => const CoordinatorReviewPanel(),
-        '/status': (context) => const StatusPlacementPage(),
-      },
+      home: const MainDashboard(),
     );
   }
 }

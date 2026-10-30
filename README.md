@@ -1,17 +1,26 @@
-# internship_monitor
+# Internship Monitor
 
-A new Flutter project.
+A Flutter Web prototype for demonstrating a bounded internship application and placement workflow.
 
-## Getting Started
+## Run the prototype
 
-This project is a starting point for a Flutter application.
+Use the Flutter SDK with web support enabled:
 
-A few resources to get you started if this is your first Flutter project:
+```sh
+flutter pub get
+flutter run -d chrome
+```
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Demonstration workflow
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The sample path runs from student application through requirements, coordinator verification, adviser endorsement, partner submission, interview status, and placement confirmation. Use the role menu in the top bar to switch among Student, Coordinator, Adviser, and Partner reviewer. The same sample application remains visible as roles hand off work.
+
+The application form blocks empty required fields. Approval actions are limited by role and sequence. Use **Demo controls → Service unavailable** to show a failed update, restore the service, and retry it. Prototype state is held in memory for the current session.
+
+## Scope and data
+
+- This is a browser-based Flutter prototype with sample data; it does not connect to a backend, send email, upload real documents, or contact internship partners.
+- Document checkboxes represent fictional uploaded items for demonstrating requirement verification.
+- Do not enter real student information or production credentials.
+- The role selector demonstrates workflow authorization in the interface only. A deployed system must enforce identity, permissions, persistence, validation, and audit history on a trusted backend.
+- Optional features should not replace evidence for the normal workflow or the invalid, unauthorized, unavailable-service, and recovery paths.
